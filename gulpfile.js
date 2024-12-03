@@ -3,7 +3,8 @@ const postcss= require('gulp-postcss');
 const autoprefixer= require('autoprefixer-core');
 const lost = require('lost');
 const cssnext= require('gulp-cssnext');
-gulp.task('frontend', (callback)=>{
+
+gulp.task('frontend', (callback)=>{ // <- funcion principal
     var proceso =[lost,autoprefixer];
     return gulp.src('styles.css')
     .pipe(cssnext({compress:true}))
